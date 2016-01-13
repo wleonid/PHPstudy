@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>order</title>
+    <style type="text/css">
+    table {
+        text-align: center;
+    }
+    
+    table td {
+        width: 100px;
+    }
+    
+    table tr:first-child {
+        background-color: #abc;
+    }
+    </style>
+</head>
+
+<body>
+    <form id="fff" action="http://127.0.0.1/order.php" method="get">
+        <table>
+            <tr>
+                <td>品名</td>
+                <td>价格</td>
+                <td>数量</td>
+            </tr>
+            <tr>
+                <td>苹果</td>
+                <td>5.00</td>
+                <td>
+                    <input type="text" name="apple">
+                </td>
+            </tr>
+            <tr>
+                <td>香蕉</td>
+                <td>4.00</td>
+                <td>
+                    <input type="text" name="banna">
+                </td>
+            </tr>
+            <tr>
+                <td>橘子</td>
+                <td>4.50</td>
+                <td>
+                    <input type="text" name="orange">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input type="submit" id="sub" value="结算">
+                </td>
+            </tr>
+        </table>
+        <div id="my"></div>
+        <!-- <script type="text/javascript">
+        var sub = document.getElementById("sub");
+        sub.onclick = function() {
+            var a = new XMLHttpRequest();
+            var b = document.getElementById("fff");
+            a.open("GET", "http://127.0.0.1/order.php", true);
+            a.send(serialize(b));
+            a.onreadystatechange = function() {
+                if (a.readyState == 4 && a.status == 200) {
+                    document.getElementById("my").innerHTML = a.responseText;
+                }
+            }
+            return false;
+        }
+        </script> -->
+    </form>
+</body>
+
+</html>
